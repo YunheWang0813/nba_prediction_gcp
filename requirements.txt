@@ -4,3 +4,4 @@ Flask-Script
 pytest
 pylint
 requests
+locust
