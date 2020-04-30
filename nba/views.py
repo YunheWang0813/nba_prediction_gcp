@@ -23,20 +23,24 @@ def space_helper(name):
 def result(name1, name2):
 
     string = 'https://bajrakawc7.execute-api.us-east-1.amazonaws.com/test/nba-match?' + 'Team=' + space_helper(name1) + '&Oppt=' + space_helper(name2)
-    print(string)
     print('https://bajrakawc7.execute-api.us-east-1.amazonaws.com/test/nba-match?Team=Atlanta%20Hawks&Oppt=Oklahoma%20City%20Thunder')
     r = requests.get(string)
     item = json.loads(r.text)['Item']
     
     score1 = item["Team"]
     score2 = item["Oppt"]
-    print(score1)
+
     team_win_ratio = item["oppt_loss_probability"]  # Team win ratio
     oppt_win_ratio = item["team_loss_probability"]  # Oppt win ratio
     score3 = round(float(team_win_ratio) * 100, 2)
     score4 = round(float(oppt_win_ratio) * 100, 2)
     
-    score5 = space_helper(name1)
-    score6 = space_helper(name2)
+    # score5 = space_helper(name1)
+    # score6 = space_helper(name2)
+
+    team_ast = item["team_AST%"]  # Team assist%
+    oppt_ast = item["oppt_AST%"]  # Oppt assist%
+    score5 = round(float(team_ast) * 100, 2)
+    score6 = round(float(oppt_ast) * 100, 2)
 
     return render_template('show_result.html', score1=score1, score2=score2, score3=score3, score4=score4, score5=score5, score6=score6)

@@ -3,16 +3,16 @@
 
     {% if score1 and score2 %}
     <div class="row mt-4">
-      <div class="col-4 offset-1 text-center">Main</div>
-      <div class="col-4 offset-2 text-center">Oppt</div>
+      <div class="col-4 offset-1 text-center h4" style="color:Tomato;">Home</div>
+      <div class="col-4 offset-2 text-center h4" style="color:SkyBlue;">Away</div>
+    </div>
+    gi
+    <div class="row mt-2">
+      <div class="col-4 offset-1 text-center h3">{{score1}}</div>
+      <div class="col-4 offset-2 text-center h3">{{score2}}</div>
     </div>
     
-    <div class="row mt-4">
-      <div class="col-4 offset-1 text-center">{{score1}}</div>
-      <div class="col-4 offset-2 text-center">{{score2}}</div>
-    </div>
-    
-    <div class="row mt-4">
+    <div class="row align-items-center mt-2">
       <div class="col-4 offset-1 text-center">
         {% if score1 == 'Atlanta Hawks' %}
         <img src="{{url_for('static', filename='images/Atlanta%20Hawks.png')}}" class="img-thumbnail">
@@ -76,7 +76,10 @@
         <img src="{{url_for('static', filename='images/Washington%20Wizards.png')}}" class="img-thumbnail">
         {% endif %}
       </div>
-      <div class="col-4 offset-2 text-center">
+      <div class="col-2 text-center">
+          <img src="{{url_for('static', filename='images/VS.png')}}" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="col-4 text-center">
         {% if score2 == 'Atlanta Hawks' %}
         <img src="{{url_for('static', filename='images/Atlanta%20Hawks.png')}}" class="img-thumbnail">
         {% elif score2 == 'Boston Celtics' %}
@@ -140,10 +143,23 @@
         {% endif %}
       </div>
     </div>
-    
+
     <div class="row mt-4">
-      <div class="col-4 offset-1 text-center">{{score3}}%</div>
-      <div class="col-4 offset-2 text-center">{{score4}}%</div>
+        <div class="col-6 offset-3 text-center h5">Winning Percentage</div>
+    </div>
+    
+    <div class="row mt-2">
+      <div class="col-4 offset-1 text-center border h5">{{score3}}%</div>
+      <div class="col-4 offset-2 text-center border h5">{{score4}}%</div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-6 offset-3 text-center h5">Assist Percentage</div>
+    </div>
+    
+    <div class="row mt-2">
+      <div class="col-4 offset-1 text-center border h5">{{score5}}%</div>
+      <div class="col-4 offset-2 text-center border h5">{{score6}}%</div>
     </div>
     
     <div class="row justify-content-center">
