@@ -43,4 +43,14 @@ def result(name1, name2):
     score5 = round(float(team_ast) * 100, 2)
     score6 = round(float(oppt_ast) * 100, 2)
 
-    return render_template('show_result.html', score1=score1, score2=score2, score3=score3, score4=score4, score5=score5, score6=score6)
+    team_offrtg = item["team_OffRtg"]  # Team offensive rating
+    oppt_offrtg = item["oppt_OffRtg"]  # Oppt offensive rating
+    score7 = round(float(team_offrtg) * 100, 2)
+    score8 = round(float(oppt_offrtg) * 100, 2)
+
+    team_defrtg = item["team_DefRtg"]  # Team defensive rating
+    oppt_defrtg = item["oppt_DefRtg"]  # Oppt defensive rating
+    score9 = round(float(team_defrtg) * 100, 2)
+    score10 = round(float(oppt_defrtg) * 100, 2)
+
+    return render_template('show_result.html', score1=score1, score2=score2, score3=score3, score4=score4, score5=score5, score6=score6, score7=score7, score8=score8, score9=score9, score10=score10)
