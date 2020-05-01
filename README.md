@@ -14,13 +14,13 @@ Team: Yunhe Wang, Gavin Jin, Jingyu Su, Jia Rong Chua
 ## Backend-Frontend Integration 
 ML output to DynamoDB:
 1. Create a Lambda function 
-2. upload the zipped version of ’S3toDynamoDB.py’ to the lambda function created or copy it directly to the Lambda function IDE
+2. upload the zipped version of ```S3toDynamoDB.py``` to the lambda function created or copy it directly to the Lambda function IDE
 3. Modify the IAM role of this function to allow access authority for S3 and DynamoDB 
 4. Add S3 object trigger to the function
 
 DynamoDB to API:
 1. Create a Lambda function 
-2. upload the zipped version of ‘DynamoDB_API.py’ to the lambda function created or copy it directly to the Lambda function IDE
+2. upload the zipped version of ```DynamoDB_API.py``` to the lambda function created or copy it directly to the Lambda function IDE
 3. Modify the IAM role of this function to allow access authority for DynamoDB 
 4. Add API gateway trigger to the function
 
