@@ -12,19 +12,19 @@ Team: Yunhe Wang, Gavin Jin, Jingyu Su, Jia Rong Chua
 7. Predicted values stored as csv file and uploaded to S3 bucket
 
 ## Backend-Frontend Integration 
-ML output to DynamoDB:
+### ML output to DynamoDB:
 1. Create a Lambda function 
 2. upload the zipped version of ’S3toDynamoDB.py’ to the lambda function created or copy it directly to the Lambda function IDE
 3. Modify the IAM role of this function to allow access authority for S3 and DynamoDB 
 4. Add S3 object trigger to the function
 
-DynamoDB to API:
+### DynamoDB to API:
 1. Create a Lambda function 
 2. upload the zipped version of ‘DynamoDB_API.py’ to the lambda function created or copy it directly to the Lambda function IDE
 3. Modify the IAM role of this function to allow access authority for DynamoDB 
 4. Add API gateway trigger to the function
 
-API Gateway:
+### API Gateway:
 1. Start a resource for the project
 2. Create a method to host request
 3. Create GET method to form a API
@@ -32,9 +32,9 @@ API Gateway:
 5. Test the created API with a built-in test function
 
 ## Frontend Web Application Development (Yunhe Wang)
-Framework: Flask
-Frontend: Javascript, JQuery, HTML/CSS, Bootstrap 4
-Backend: Python
+* Framework: Flask
+* Frontend: Javascript, JQuery, HTML/CSS, Bootstrap 4
+* Backend: Python
 
 To start the application:
 1. Access virtual environment: ```source venv/bin/activate```
@@ -50,5 +50,6 @@ The application is tested locally
 4. in a separate shell environment, run ```locust``` in the directory where the ```locustfile.py``` resides
 5. access the locust dashboard on port 8089 and create swarm of 1000 users
 
-Demo Video Link: https://youtu.be/bCiO7xc37Uc
+### Demo Video Link
+https://youtu.be/bCiO7xc37Uc
 
