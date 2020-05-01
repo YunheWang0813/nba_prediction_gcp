@@ -50,6 +50,6 @@ The application is tested locally in AWS Cloud9
 4. in a separate shell environment, run ```locust``` in the directory where the ```locustfile.py``` resides
 5. access the locust dashboard on port 8089 and create swarm of 1000 users
 
-### Demo Video Link
+## Demo Video Link
 https://youtu.be/bCiO7xc37Uc
 
