@@ -12,19 +12,19 @@ Team: Yunhe Wang, Gavin Jin, Jingyu Su, Jia Rong Chua
 7. Predicted values stored as csv file and uploaded to S3 bucket
 
 ## Backend-Frontend Integration 
-### ML output to DynamoDB:
+ML output to DynamoDB:
 1. Create a Lambda function 
 2. upload the zipped version of ’S3toDynamoDB.py’ to the lambda function created or copy it directly to the Lambda function IDE
 3. Modify the IAM role of this function to allow access authority for S3 and DynamoDB 
 4. Add S3 object trigger to the function
 
-### DynamoDB to API:
+DynamoDB to API:
 1. Create a Lambda function 
 2. upload the zipped version of ‘DynamoDB_API.py’ to the lambda function created or copy it directly to the Lambda function IDE
 3. Modify the IAM role of this function to allow access authority for DynamoDB 
 4. Add API gateway trigger to the function
 
-### API Gateway:
+API Gateway:
 1. Start a resource for the project
 2. Create a method to host request
 3. Create GET method to form a API
