@@ -43,9 +43,9 @@ To start the application:
 4. Test locally: ```python main.py```
 
 ## Locust Load Testing
-The application is tested locally
+The application is tested locally in AWS Cloud9
 1. run the main.py file in the virtual environment
-2. If using AWS (which we did for load testing), ensure pots 8080 and 8089 are provided with public access
+2. If using AWS, ensure ports 8080 and 8089 are provided with public access
 3. create ```locustfile.py``` to test the main page access, fixed team predictions and randomized team predictions
 4. in a separate shell environment, run ```locust``` in the directory where the ```locustfile.py``` resides
 5. access the locust dashboard on port 8089 and create swarm of 1000 users
