@@ -53,3 +53,5 @@ The application is tested locally in AWS Cloud9
 ## Demo Video Link
 https://youtu.be/bCiO7xc37Uc
 
+## Application Link
+https://nba-predict-project.uc.r.appspot.com
