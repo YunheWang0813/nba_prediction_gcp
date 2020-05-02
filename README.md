@@ -2,6 +2,8 @@
 
 Team: Yunhe Wang, Gavin Jin, Jingyu Su, Jia Rong Chua
 
+Project Demo
+![Demo](https://user-images.githubusercontent.com/8799320/80853068-c5372880-8bfb-11ea-98c0-fc83ebbfeb07.png)
 ## Backend Machine Learning Model
 1. Download input data (team statistics data) from NBA.com and upload file to S3 bucket
 2. Create a new notebook instance of AWS Sagemaker 
@@ -12,6 +14,8 @@ Team: Yunhe Wang, Gavin Jin, Jingyu Su, Jia Rong Chua
 7. Predicted values stored as csv file and uploaded to S3 bucket
 
 ## Backend-Frontend Integration 
+Data Path Diagram
+![data path](https://user-images.githubusercontent.com/8799320/80853121-26f79280-8bfc-11ea-87e5-9e12e592e511.png)
 ML output to DynamoDB:
 1. Create a Lambda function 
 2. upload the zipped version of ```S3toDynamoDB.py``` to the lambda function created or copy it directly to the Lambda function IDE
